@@ -1,0 +1,6 @@
+services:
+  web-fe:
+    build: .
+    command: gunicorn -b 0.0.0.0:8000 server:app --reload
+    ports:
+      - 8080:8000
